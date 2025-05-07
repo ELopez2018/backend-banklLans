@@ -20,11 +20,12 @@ import java.util.UUID;
 @AllArgsConstructor
 public class Loan {
   @Id
-  @GeneratedValue
-  private UUID id;
+  @Column(name = "id")
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
+  protected Long id;
 
   @NotNull
-  private UUID userId;
+  private Long userId;
 
   @NotNull
    private BigDecimal amount;

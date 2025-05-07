@@ -22,9 +22,6 @@ public class User implements UserDetails {
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   protected Long id;
 
-  @Column(name = "fullName")
-  private String fullName;
-
   @Column(name = "email" , unique = true, nullable = true)
   private String email;
 

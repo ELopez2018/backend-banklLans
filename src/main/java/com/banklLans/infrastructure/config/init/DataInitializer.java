@@ -20,8 +20,9 @@ public class DataInitializer implements CommandLineRunner {
   @Override
   public void run(String... args) throws Exception {
     if (userRepository.count() == 0) {
+      System.out.println("AGREGANDO USUARIO");
       userRepository.saveAll(Arrays.asList(
-              new User(1L, "estarlin.elv@gmail.com", passwordEncoder.encode("123456"), "estarlin.elv@gmail.com")
+              new User(1L, "estarlin.elv@gmail.com",   passwordEncoder.encode("123456"))
       ));
     }
 
