@@ -12,7 +12,7 @@ import java.util.Arrays;
 
 @Component
 public class DataInitializer implements CommandLineRunner {
-
+  @Autowired
   private  PasswordEncoder passwordEncoder;
   @Autowired
   private UserRepository userRepository;
