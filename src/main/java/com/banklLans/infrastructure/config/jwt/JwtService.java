@@ -33,6 +33,7 @@ public class JwtService {
 
     private String getToken(HashMap<String, Object> extraClaims, UserDetails userDetails) {
         User UserDb = userRepository.findByEmail(userDetails.getUsername()).orElseThrow();
+        extraClaims.put("role", UserDb.getRole().toString());
         return Jwts
                 .builder()
                 .setClaims(extraClaims)

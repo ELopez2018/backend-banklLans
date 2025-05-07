@@ -22,7 +22,7 @@ public class DataInitializer implements CommandLineRunner {
     if (userRepository.count() == 0) {
       System.out.println("AGREGANDO USUARIO");
       userRepository.saveAll(Arrays.asList(
-              new User(1L, "estarlin.elv@gmail.com",   passwordEncoder.encode("123456"))
+              new User(1L, "estarlin.elv@gmail.com",   passwordEncoder.encode("123456"), "admin")
       ));
     }
 
